@@ -1,0 +1,14 @@
+<div class="container bg-dark" *ngIf="!loading">
+  <div class="row" style="padding-top:30px ;" >
+    <div class="col-sm"><img src="{{data.image}}" style="height:100px ; width:100px"></div>
+    <div class="col-sm">{{data.title}}</div>
+    <div class="col-sm">{{data.category}}</div>
+    <div class="col-sm">{{data.title}}</div>
+    <div class="col-sm">price:{{data.price}}</div>
+    <div class="col-sm">count:{{data.rating.count}},rate:{{data.rating.rate}}</div>
+  </div>
+</div>
+
+<div class="text-center w-100" >
+  <spinner *ngIf="loading"></spinner>
+</div>

@@ -1,0 +1,27 @@
+/* .cart{
+  margin-top: 70px;
+} */
+.total{
+
+  display: flex;
+  justify-content: right;
+
+
+}
+
+.totalcontent{
+
+  color: white;
+  font-size: 18px;
+
+}
+.deletecart{
+  display: flex;
+  justify-content: right;
+
+}
+.cartItems{
+  display: flex;
+  justify-content: left;
+}
+

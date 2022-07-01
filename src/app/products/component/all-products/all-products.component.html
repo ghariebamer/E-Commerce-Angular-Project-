@@ -1,0 +1,24 @@
+
+<div class="box " style="margin-top:20px ;" >
+  <div style="float:left;">
+    <button type="button" icon="pi pi-file-excel" class="btn btn-outline-secondary" style="margin-left:5px;float: left;" (click)="Export()">Export to Execl</button>
+  </div>
+    <div >
+        <app-select [data]="Categories" [title]="'Categories'" (selectedvalue)="onChange($event)" ></app-select>
+    </div>
+
+  <div class="container" *ngIf="!loader" >
+        <div class="row" style="display: flex;" *ngFor="let item of AllData" >
+          <app-product [data]="item" (item)="AddtoCart($event)" ></app-product>
+        </div>
+  </div>
+</div>
+<div class="text-center w-100" *ngIf="loader">
+  <spinner></spinner>
+</div>
+
+
+
+
+
+

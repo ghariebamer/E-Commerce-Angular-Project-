@@ -1,0 +1,10 @@
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01">{{title}}</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01" (change)="detectchange($event)">
+    <option selected>Select...</option>
+    <option value="{{option}}" *ngFor="let option of data">{{option}}</option>
+
+  </select>
+  <div>

@@ -1,0 +1,17 @@
+<div class="col-sm">
+  <div class="item" routerLink="/details/{{data.id}}" >
+    <img class="card-img-top" style="height:100px ; width:100px " src={{data.image}} alt="Card image cap">
+
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{data.title}}</h5>
+    <p class="card-text">{{data.description}}</p>
+    <a class="btn btn-primary float-left"  *ngIf="!addbutton" (click)="addbutton=true">AddToCart</a>
+    <span ><button class="btn btn-success ">{{data.price}}</button></span>
+
+    <div class="d-flex w-50" *ngIf="addbutton">
+      <input type="number" class="form-control " [(ngModel)]="amount">
+      <button class="btn btn-danger" (click)="Add()">add</button>
+    </div>
+  </div>
+</div>
